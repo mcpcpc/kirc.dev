@@ -83,9 +83,9 @@ kirc -s irc.example.org -p 6667 -c “#general,#help” alice
 
 ## Getting Help
 
-- 📖 [Read the full documentation](/documentation)
-- 🐛 [Report issues on GitHub](https://github.com/mcpcpc/kirc/issues)
-- 💻 [View the source code](https://github.com/mcpcpc/kirc)
+- [Read the full documentation](/documentation)
+- [Report issues on GitHub](https://github.com/mcpcpc/kirc/issues)
+- [View the source code](https://github.com/mcpcpc/kirc)
 
 ## License
 
