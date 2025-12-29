@@ -1,0 +1,14 @@
+title: kirc
+description: A tiny, dependency-light IRC client that follows the KISS philosophy
+url: "https://kirc.dev"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+
+# Exclude from processing
+exclude: 
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
