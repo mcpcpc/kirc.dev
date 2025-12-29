@@ -232,14 +232,13 @@ kirc -a PLAIN:YWxpY2UAYWxpY2UAcGFzc3dvcmQ= alice
 
 See the [Advanced Usage](#advanced-usage) section for details on generating authentication tokens.
 
-—
+—--
 
 ## Environment Variables
 
 Instead of typing options every time, you can set defaults using environment variables.  These are overridden by command-line options when specified.
 
 | Variable | Description |
-|-———|-————|
 | `KIRC_SERVER` | Default IRC server hostname |
 | `KIRC_PORT` | Default server port |
 | `KIRC_CHANNELS` | Default channels to join (comma separated) |
@@ -282,14 +281,12 @@ kirc uses a simple command system.  Here are all the commands you need to know:
 ### Sending Messages
 
 | Command | Description | Example |
-|———|-————|———|
 | `<message>` | Send a message to the current target | `Hello everyone!` |
 | `@<target> <message>` | Send a message to a specific user or channel | `@alice Hey there!` |
 
 ### IRC Commands
 
 | Command | Description | Example |
-|———|-————|———|
 | `/<command>` | Send a raw IRC command | `/join #newchannel` |
 | `/set <target>` | Set the default message target | `/set #general` |
 | `/me <action>` | Send an action (like emotes) | `/me waves hello` |
@@ -300,7 +297,6 @@ kirc uses a simple command system.  Here are all the commands you need to know:
 Since kirc lets you send raw IRC commands with `/`, here are the most useful ones: 
 
 | Command | Description | Example |
-|———|-————|———|
 | `/join` | Join a channel | `/join #help` |
 | `/part` | Leave a channel | `/part #help` |
 | `/nick` | Change your nickname | `/nick newnickname` |
@@ -333,7 +329,6 @@ kirc uses keyboard shortcuts similar to other command-line programs.  Here’s y
 ### Navigation
 
 | Key | Action |
-|——|———|
 | `←` (Left Arrow) | Move cursor left |
 | `→` (Right Arrow) | Move cursor right |
 | `Home` | Move cursor to start of line |
@@ -342,14 +337,12 @@ kirc uses keyboard shortcuts similar to other command-line programs.  Here’s y
 ### History
 
 | Key | Action |
-|——|———|
 | `↑` (Up Arrow) | Previous command in history |
 | `↓` (Down Arrow) | Next command in history |
 
 ### Editing
 
 | Key | Action |
-|——|———|
 | `Backspace` | Delete character before cursor |
 | `Delete` | Delete character at cursor |
 | `CTRL+U` | Delete entire line |
@@ -357,10 +350,9 @@ kirc uses keyboard shortcuts similar to other command-line programs.  Here’s y
 ### Control
 
 | Key | Action |
-|——|———|
 | `CTRL+C` | Force quit kirc |
 
-—
+---
 
 ## DCC File Transfers
 
@@ -497,7 +489,7 @@ Make it executable:
 chmod +x ~/bin/myirc
 ```
 
-—
+---
 
 ## Troubleshooting
 
@@ -554,7 +546,7 @@ If text appears garbled:
 2. Use a monospace font
 3. Check your terminal’s character encoding (should be UTF-8)
 
-—
+---
 
 ## Getting Help
 
@@ -562,6 +554,6 @@ If text appears garbled:
 - **Source Code:** [View on GitHub](https://github.com/mcpcpc/kirc)
 - **Man Page:** Run `man kirc` after installation
 
-—
+---
 
 *This documentation is for kirc 1.0.0. For the latest updates, visit the [GitHub repository](https://github.com/mcpcpc/kirc).*
