@@ -132,7 +132,7 @@ If you see usage information and a list of available options, congratulations—
 
 If you get a “command not found” error, make sure `/usr/local/bin` is in your PATH environment variable, or try running kirc from the build directory with `./kirc`.
 
-—
+---
 
 ## Basic Usage
 
