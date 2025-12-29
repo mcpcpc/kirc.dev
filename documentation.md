@@ -1,14 +1,11 @@
-—
+---
 layout:  default
-title: Documentation - kirc
-description:  Complete documentation for kirc, the lightweight terminal IRC client
-—
+title: Documentation
+—-—
 
 # kirc Documentation
 
-This guide will walk you through everything you need to know to use kirc effectively.  Whether you’re new to IRC or just new to kirc, this documentation will help you get started. 
-
-—
+This guide will walk you through everything you need to know to use kirc effectively.  Whether you’re new to IRC or just new to kirc, this documentation will help you get started.
 
 ## Table of Contents
 
@@ -21,8 +18,6 @@ This guide will walk you through everything you need to know to use kirc effecti
 7. [DCC File Transfers](#dcc-file-transfers)
 8. [Advanced Usage](#advanced-usage)
 9. [Troubleshooting](#troubleshooting)
-
-—
 
 ## Installation
 

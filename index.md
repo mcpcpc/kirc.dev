@@ -1,8 +1,7 @@
-—
+—--
 layout: default
-title:  kirc - Lightweight Terminal IRC Client
-description: A tiny, dependency-light IRC client that follows the KISS philosophy
-—
+title:  Home
+---
 
 # Welcome to kirc
 
