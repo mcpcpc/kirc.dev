@@ -21,50 +21,54 @@
     }
 
     header {
-      position: fixed;
-      font-size: 1rem;
+      position: fixed;D
       top: 0;
       left: 0;
       right: 0;
-      height: 3rem;
       color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding:  0 1rem;
       z-index: 100;
     }
 
-    header h1 {
+    .header-inner {
+      max-width: 80ch;
+      margin: 0 auto;
+      padding: 0.75rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .header-inner h1 {
       margin: 0;
       padding: 0;
       font-size: inherit;
       font-weight: 600;
     }
 
-    header h1 a {
+    .header-inner h1 a {
       color: #fff;
       text-decoration: none;
     }
 
-    header nav {
+    .header-inner nav {
       display: flex;
       gap: 1rem;
     }
 
-    header nav a {
+    .header-inner nav a {
       flex: 1;
       color: #ccc;
       text-decoration: none;
       font-size: inherit;
     }
 
-    nav a:active {
+    .header-inner nav a:active {
       color: #fff;
       text-decoration: underline;
     }
 
-    nav a:hover {
+    .header-inner nav a:hover {
       color: #fff;
     }
 
@@ -244,12 +248,14 @@
 </head>
 <body>
   <header>
-    <h1><a href="{{ '/' | relative_url }}">kirc</a></h1>
-    <nav>
-      <a href="{{ '/' | relative_url }}">home</a>
-      <a href="{{ '/documentation' | relative_url }}">docs</a>
-      <a href="https://github.com/mcpcpc/kirc">source</a>
-    </nav>
+    <div class="header-inner">
+      <h1><a href="{{ '/' | relative_url }}">kirc</a></h1>
+      <nav>
+        <a href="{{ '/' | relative_url }}">home</a>
+        <a href="{{ '/documentation' | relative_url }}">docs</a>
+        <a href="https://github.com/mcpcpc/kirc">source</a>
+      </nav>
+    </div>
   </header>
 
   <main>
