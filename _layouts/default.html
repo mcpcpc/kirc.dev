@@ -7,34 +7,33 @@
   <meta name="description" content="{{ page.description | default: site.description }}">
   <style>
     * {
-      margin: 0;
+      margin:  0;
       padding: 0;
       box-sizing: border-box;
     }
 
     html {
-      font-family: monospace;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
       font-size: 16px;
-      line-height: 1.6;
-      color: #222;
-      background:  #fff;
+      line-height: 1.7;
+      color: #1a1a1a;
+      background:  #fafafa;
     }
 
     body {
-      max-width: 72ch;
-      margin:  0 auto;
-      padding: 2rem 1rem;
+      max-width: 640px;
+      margin: 0 auto;
+      padding:  3rem 1.5rem;
     }
 
     header {
-      border-bottom: 1px solid #222;
-      padding-bottom: 1rem;
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
     }
 
     header h1 {
-      font-size: 1.5rem;
-      font-weight: bold;
+      font-size:  1.75rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
     }
 
     header h1 a {
@@ -43,154 +42,174 @@
     }
 
     nav {
-      margin-top: 0.5rem;
+      margin-top: 0.75rem;
     }
 
     nav a {
-      margin-right: 1rem;
+      margin-right: 1. 5rem;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
     }
 
     main {
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
     }
 
     h1, h2, h3, h4, h5, h6 {
-      margin-top: 1.5rem;
-      margin-bottom: 0.5rem;
-      font-weight: bold;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
     }
 
-    h1 { font-size: 1.5rem; }
-    h2 { font-size: 1.25rem; }
+    h1 { font-size: 1.75rem; }
+    h2 { font-size: 1.35rem; }
     h3 { font-size: 1.1rem; }
 
     p, ul, ol, table, pre {
-      margin-bottom: 1rem;
+      margin-bottom: 1.25rem;
     }
 
     a {
-      color:  #005577;
+      color:  #0055aa;
     }
 
     a: hover {
-      color: #222;
+      color: #003366;
     }
 
     ul, ol {
-      padding-left: 2rem;
+      padding-left: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.25rem;
     }
 
     pre, code {
-      font-family: monospace;
-      background: #f5f5f5;
+      font-family: "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: 0.875rem;
     }
 
     pre {
-      padding:  1rem;
+      background:  #fff;
+      border:  1px solid #e0e0e0;
+      border-radius: 4px;
+      padding: 1rem;
       overflow-x: auto;
-      border-left: 2px solid #005577;
     }
 
     code {
-      padding: 0.1rem 0.3rem;
+      background:  #fff;
+      border:  1px solid #e0e0e0;
+      border-radius: 3px;
+      padding: 0.15rem 0.4rem;
     }
 
     pre code {
+      border:  none;
       padding: 0;
       background: none;
     }
 
     table {
-      width: 100%;
+      width:  100%;
       border-collapse: collapse;
     }
 
     th, td {
       text-align: left;
-      padding: 0.5rem;
-      border-bottom: 1px solid #ddd;
+      padding: 0.6rem 0.75rem;
+      border-bottom: 1px solid #e0e0e0;
     }
 
     th {
-      border-bottom: 2px solid #222;
+      font-weight: 600;
+      border-bottom: 2px solid #1a1a1a;
     }
 
     blockquote {
-      border-left: 2px solid #005577;
+      border-left: 3px solid #0055aa;
       padding-left: 1rem;
-      margin:  1rem 0;
+      margin:  1.5rem 0;
       color: #555;
+      font-style: italic;
     }
 
     hr {
-      border:  none;
-      border-top: 1px solid #ddd;
-      margin: 2rem 0;
+      border: none;
+      border-top: 1px solid #e0e0e0;
+      margin: 2.5rem 0;
     }
 
     footer {
-      border-top: 1px solid #222;
-      padding-top: 1rem;
-      font-size: 0.875rem;
-      color: #555;
+      padding-top: 1.5rem;
+      border-top:  1px solid #e0e0e0;
+      font-size: 0.85rem;
+      color: #666;
     }
 
     footer a {
-      color: #555;
+      color: #666;
+    }
+
+    footer a:hover {
+      color: #1a1a1a;
     }
 
     @media (prefers-color-scheme: dark) {
       html {
-        color:  #ccc;
-        background: #111;
-      }
-
-      header, footer {
-        border-color: #444;
+        color: #e0e0e0;
+        background: #0d0d0d;
       }
 
       a {
-        color:  #6cf;
+        color:  #5aa8ff;
       }
 
       a:hover {
-        color: #fff;
+        color: #8cc4ff;
       }
 
       pre, code {
-        background: #1a1a1a;
-      }
-
-      pre {
-        border-color: #6cf;
+        background:  #161616;
+        border-color: #2a2a2a;
       }
 
       th {
-        border-color: #ccc;
+        border-color: #e0e0e0;
       }
 
       td {
-        border-color: #333;
+        border-color: #2a2a2a;
       }
 
       blockquote {
-        border-color: #6cf;
+        border-color: #5aa8ff;
         color: #999;
       }
 
-      hr {
-        border-color: #333;
+      hr, footer {
+        border-color: #2a2a2a;
       }
 
       footer, footer a {
         color: #777;
+      }
+
+      footer a:hover {
+        color:  #e0e0e0;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1><a href="{{ '/' | relative_url }}">{{ site.title | default: 'kirc' }}</a></h1>
+    <h1><a href="{{ '/' | relative_url }}">{{ site. title | default: 'kirc' }}</a></h1>
     <nav>
       <a href="{{ '/' | relative_url }}">home</a>
       <a href="{{ '/documentation' | relative_url }}">docs</a>
