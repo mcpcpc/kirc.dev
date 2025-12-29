@@ -91,6 +91,6 @@ kirc -s irc.example.org -p 6667 -c “#general,#help” alice
 
 kirc is open source software.  See the [LICENSE](https://github.com/mcpcpc/kirc/blob/main/LICENSE) file for details.
 
-—
+---
 
 *kirc is maintained by [Michael Czigler](https://github.com/mcpcpc)*
