@@ -7,6 +7,8 @@ title: Documentation
 
 This guide will walk you through everything you need to know to use kirc effectively.  Whether you’re new to IRC or just new to kirc, this documentation will help you get started.
 
+---
+
 ## Table of Contents
 
 1. [Installation](#installation)
@@ -18,6 +20,8 @@ This guide will walk you through everything you need to know to use kirc effecti
 7. [DCC File Transfers](#dcc-file-transfers)
 8. [Advanced Usage](#advanced-usage)
 9. [Troubleshooting](#troubleshooting)
+
+---
 
 ## Installation
 
@@ -92,7 +96,7 @@ kirc —help
 
 If you see the usage information, you’re ready to go!
 
-—
+---
 
 ## Basic Usage
 
@@ -144,7 +148,7 @@ Let’s break this down:
    ```
    Or press `CTRL+C` to force quit.
 
-—
+---
 
 ## Command Line Options
 
@@ -272,7 +276,7 @@ After editing, reload your config:
 source ~/.bashrc
 ```
 
-—
+---
 
 ## Commands and Aliases
 
@@ -320,7 +324,7 @@ Hello everyone!    <- This goes to #general
 @#help This goes to #help channel
 ```
 
-—
+---
 
 ## Key Bindings
 
