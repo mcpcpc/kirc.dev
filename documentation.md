@@ -401,7 +401,7 @@ XDCC is a protocol used by file-sharing bots on IRC. To request a file:
 
 2. **Check for filename conflicts** - if a file with the same name exists, it may be overwritten
 
-—
+---
 
 ## Advanced Usage
 
