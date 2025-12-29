@@ -3,7 +3,7 @@ layout: default
 title:  Documentation
 ---
 
-# kirc Documentation
+# Documentation
 
 This guide will walk you through everything you need to know to use kirc effectively.  Whether you’re new to IRC or just new to kirc, this documentation will help you get started.
 
