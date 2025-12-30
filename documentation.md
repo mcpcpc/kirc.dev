@@ -7,6 +7,8 @@ title:  Documentation - kirc
 
 This guide will walk you through everything you need to know to use kirc effectively.  Whether you’re new to IRC or just new to kirc, this documentation will help you get started.
 
+
+kirc is a tiny, dependency-light IRC client designed with simplicity in mind. Its minimal resource footprint makes it suitable for embedded systems, lightweight containers, and resource-constrained environments.
 ---
 
 ## Table of Contents
@@ -554,25 +556,25 @@ kirc is designed to be used entirely from the keyboard, with no mouse required. 
 
 When you’re typing a message, you might need to go back and fix a typo or insert something in the middle.  kirc provides several ways to move the cursor. 
 
-The left and right arrow keys move the cursor one character at a time in the corresponding direction. This is the most straightforward way to navigate within your current line.
+The left and right arrow keys move the cursor one character at a time in the corresponding direction. This is the most straightforward way to navigate within your current line. You can also use CTRL+B to move left and CTRL+F to move right.
 
-If you need to jump to the beginning of the line, press the Home key. On some keyboards this might be labeled differently or require a function key combination.  If Home doesn’t work, you can also use the escape sequence ESC followed by [ and H. 
+If you need to jump to the beginning of the line, press the Home key (or CTRL+A). On some keyboards this might be labeled differently or require a function key combination.  If Home doesn’t work, you can also use the escape sequence ESC followed by [ and H. 
 
-Similarly, the End key jumps to the end of the line. The escape sequence ESC [ F also works.
+Similarly, the End key (or CTRL+E) jumps to the end of the line. The escape sequence ESC [ F also works.
 
 ### Navigating Command History
 
 kirc remembers the commands and messages you’ve typed, allowing you to recall and reuse them.  This is especially useful when you need to repeat a command or fix a typo in something you just sent.
 
-Press the up arrow key to go back through your history. Each press shows the previous command or message. 
+Press the up arrow key (or CTRL+P) to go back through your history. Each press shows the previous command or message. 
 
-Press the down arrow key to go forward through your history. If you’ve gone back several commands and want to return to what you were typing, keep pressing down until you get there.
+Press the down arrow key (or CTRL+N) to go forward through your history. If you’ve gone back several commands and want to return to what you were typing, keep pressing down until you get there.
 
 ### Deleting Text
 
 When you need to delete text, kirc provides a few options depending on what you want to remove.
 
-The Backspace key deletes the character immediately before the cursor. This is the most common way to fix typos as you type.
+The Backspace key (or CTRL+H) deletes the character immediately before the cursor. This is the most common way to fix typos as you type.
 
 The Delete key removes the character at the cursor position (the character the cursor is on or immediately after, depending on your terminal).
 
@@ -669,21 +671,27 @@ On macOS with Homebrew:
 brew install socat
 ```
 
-To connect to an IRC server with SSL encryption, you’ll set up a local tunnel. Open one terminal window and run:
+To connect to an IRC server with SSL encryption, you can set up a local tunnel and connect in a single command:
+
+```bash
+socat tcp-listen:6667,reuseaddr,fork,bind=127.0.0.1 ssl:irc.libera.chat:6697 & kirc -s 127.0.0.1 alice
+```
+
+This command runs socat in the background (note the `&` at the end) and then connects kirc to the local tunnel. The socat process creates a local server on port 6667 that forwards traffic to irc.libera.chat's SSL port (6697), handling all the encryption transparently.
+
+Alternatively, you can run these in separate terminal windows. In one terminal, start the socat tunnel:
 
 ```bash
 socat tcp-listen:6667,reuseaddr,fork,bind=127.0.0.1 ssl:irc.libera.chat:6697
 ```
 
-This command creates a local server on port 6667 that forwards traffic to irc.libera. chat’s SSL port (6697), handling all the encryption transparently.
-
-Now, in another terminal window, connect kirc to your local tunnel:
+Then, in another terminal window, connect kirc to your local tunnel:
 
 ```bash
 kirc -s 127.0.0.1 -p 6667 mynickname
 ```
 
-kirc thinks it’s connecting to a local server, but socat is forwarding everything securely to the real IRC server.  Your messages are encrypted between your computer and the IRC network.
+kirc thinks it's connecting to a local server, but socat is forwarding everything securely to the real IRC server.  Your messages are encrypted between your computer and the IRC network.
 
 ### Connecting Through a Proxy
 
@@ -692,11 +700,16 @@ If you need to connect to IRC through an HTTP or HTTPS proxy (common in corporat
 Set up a proxy tunnel in one terminal:
 
 ```bash
-socat tcp-listen:6667,fork,reuseaddr,bind=127.0.0.1 \
-    proxy:proxyserver. example.com:irc.libera.chat:6667,proxyport=8080
+socat tcp-listen:6667,fork,reuseaddr,bind=127.0.0.1 proxy:<proxyurl>:irc.example.org:6667,proxyport=<proxyport> & kirc -s 127.0.0.1 -p 6667 alice
 ```
 
-Replace `proxyserver.example.com` with your proxy server’s address and `8080` with the proxy port.
+Replace `<proxyurl>` with your proxy server's address and `<proxyport>` with the proxy port. This one-liner runs socat in the background and connects kirc through the proxy tunnel.
+
+Alternatively, you can run them separately. In one terminal, start the proxy tunnel:
+
+```bash
+socat tcp-listen:6667,fork,reuseaddr,bind=127.0.0.1 proxy:<proxyurl>:irc.example.org:6667,proxyport=<proxyport>
+```
 
 Then connect kirc to the tunnel:
 
@@ -734,6 +747,14 @@ Use this value with the `-a` option:
 ```bash
 kirc -a PLAIN:eW91cm5pY2sAeW91cm5pY2sAeW91cnBhc3N3b3Jk yournick
 ```
+
+Alternatively, you can generate the token inline using a shell command:
+
+```bash
+kirc -a "PLAIN:$(printf '%s\0%s\0%s' 'alice' 'alice' 'password' | base64)" alice
+```
+
+This one-liner is convenient if you don't want to use Python or create a separate script.
 
 ### Logging Your IRC Sessions
 
@@ -888,6 +909,16 @@ If you’re on a restrictive network (like at work or school), DCC transfers mig
 
 —
 
+### Exit Status
+
+kirc uses standard exit codes to indicate the success or failure of program execution:
+
+- **Exit code 0**: Successful program execution and normal client termination
+- **Exit code 1**: Usage error, syntax error, connection failure, or other operational error
+
+You can check the exit status in your shell with `echo $?` immediately after kirc exits.
+
+
 ## Getting Help
 
 If you’ve gone through this documentation and still have questions or are experiencing issues, there are several places to get help. 
@@ -904,4 +935,4 @@ For questions about IRC in general (not specific to kirc), the various IRC netwo
 
 ---
 
-*This documentation is for kirc version 1.0.0. For the latest updates and source code, visit the [GitHub repository](https://github.com/mcpcpc/kirc).*
+*This documentation is for kirc version 1.1.0. For the latest updates and source code, visit the [GitHub repository](https://github.com/mcpcpc/kirc).*
