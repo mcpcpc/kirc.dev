@@ -7,8 +7,6 @@ title:  Documentation - kirc
 
 This guide will walk you through everything you need to know to use kirc effectively.  Whether you’re new to IRC or just new to kirc, this documentation will help you get started.
 
-
-kirc is a tiny, dependency-light IRC client designed with simplicity in mind. Its minimal resource footprint makes it suitable for embedded systems, lightweight containers, and resource-constrained environments.
 ---
 
 ## Table of Contents
@@ -592,7 +590,7 @@ The graceful way to exit is to type the `/quit` command, optionally with a messa
 
 If you need to exit immediately without sending a quit message, press CTRL+C.  This forces kirc to terminate right away.  Use this if the normal quit isn’t working or if you need to disconnect quickly.
 
-—
+---
 
 ## DCC File Transfers
 
@@ -819,7 +817,7 @@ kirc -s “$IRC_SERVER” -c “$IRC_CHANNELS” “$IRC_NICK” \
 
 This script ensures your logs are organized in a dedicated directory, DCC downloads go to your Downloads folder, and each session is logged with a timestamp.
 
-—
+---
 
 ## Troubleshooting
 
