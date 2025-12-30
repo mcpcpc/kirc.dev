@@ -17,7 +17,7 @@ In a world of complex, feature-heavy applications, kirc takes a refreshingly dif
 
 ### 🚀 Lightweight & Fast
 
-kirc is written in pure C with minimal dependencies. The entire codebase is small and portable, meaning it runs quickly even on older or resource-constrained systems. 
+kirc is written in pure C with minimal dependencies. The entire codebase is small and portable, meaning it runs quickly even on older or resource-constrained systems. Its minimal resource footprint makes it suitable for embedded systems, lightweight containers, and resource-constrained environments. 
 
 ### ⌨️ Keyboard-Driven
 
