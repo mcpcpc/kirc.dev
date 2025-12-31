@@ -248,7 +248,7 @@
     <div class="header-inner">
       <h1><a href="{{ '/' | relative_url }}">kirc</a></h1>
       <nav>
-        {% for nav in site.data.nav %}
+        {% for nav in site.navigation %}
         <a href="{{ nav.url }}" {% if nav.url == page.url %}class="active"{% endif %}>{{ nav.text }}</a>
         {% endfor %}
       </nav>

@@ -13,7 +13,7 @@ exclude:
   - README.md
   - LICENSE
 
-nav:
+navigation:
 - text: home
   url: /
 - text: docs
