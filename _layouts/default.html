@@ -256,5 +256,23 @@
       <p><a href="https://github.com/mcpcpc/kirc">kirc</a> &mdash; MIT License</p>
     </div>
   </footer>
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const navLinks = document.querySelectorAll('#header-inner nav a');
+    const currentPathname = window.location.pathname;
+
+    navLinks.forEach(link => {
+      const linkPathname = new URL(link.href).pathname;
+
+      if (currentPathname === linkPathname) {
+        link.classList.add('active');
+      }
+
+      if (currentPathname === "/index.html" && linkPathname === "/") {
+        link.classList.add('active');
+      }
+    });
+  });
+  </script>
 </body>
 </html>
