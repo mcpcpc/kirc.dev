@@ -240,7 +240,7 @@
     <div class="header-inner">
       <h1><a href="{{ '/' | relative_url }}">kirc</a></h1>
       <nav>
-        <a href="{{ '/' | relative_url }}">home</a>
+        <a href="{{ '/' | relative_url }}" {% if '/' == page.url %} class="active"{% endif %}>home</a>
         <a href="{{ '/documentation' | relative_url }}">docs</a>
         <a href="https://github.com/mcpcpc/kirc">source</a>
       </nav>
