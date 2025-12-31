@@ -1,6 +1,6 @@
 - text: home
   url: /
 - text: docs
-  url: /documentation/
+  url: /documentation
 - text: git
   url: https://github.com/mcpcpc/git 
