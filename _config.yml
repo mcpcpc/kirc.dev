@@ -12,3 +12,11 @@ exclude:
   - Gemfile.lock
   - README.md
   - LICENSE
+
+nav:
+- text: home
+  url: /
+- text: docs
+  url: /docs
+- text: src
+  url: https://github.com/mcpcpc/kirc
