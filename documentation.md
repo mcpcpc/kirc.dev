@@ -905,7 +905,7 @@ Some IRC networks offer alternative file transfer methods that work better throu
 
 If you’re on a restrictive network (like at work or school), DCC transfers might simply not be possible.
 
-—
+---
 
 ### Exit Status
 
