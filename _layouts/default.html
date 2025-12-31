@@ -15,6 +15,7 @@
       --color-text-muted: #666;
       --color-link: #005577;
       --color-border-primary: #ddd;
+      --color-border-accent: #005577;
     }
 
     :root[data-theme="dark"] {
@@ -26,6 +27,7 @@
       --color-text-muted: #777;
       --color-link: #6cf;
       --color-border-primary: #333;
+      --color-border-accent: #6cf;
     }
 
     * {
@@ -148,7 +150,7 @@
     pre {
       padding:  1rem;
       overflow-x: auto;
-      border-left: 3px solid #005577;
+      border-left: 3px solid var(--color-border-accent);
     }
 
     code {
@@ -178,7 +180,7 @@
     }
 
     blockquote {
-      border-left: 3px solid #005577;
+      border-left: 3px solid var(--color-border-accent);
       padding-left: 1rem;
       margin:  1rem 0;
       color: var(--color-text-secondary);
@@ -212,16 +214,8 @@
         background: #000;
       }
 
-      pre {
-        border-color: #6cf;
-      }
-
       th {
         border-color: #ddd;
-      }
-
-      blockquote {
-        border-color: #6cf;
       }
     }
     .theme-toggle {
