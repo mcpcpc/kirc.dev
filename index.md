@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Homepage - kirc
+title:  Homepage - kirc
 ---
 
 # Welcome to kirc
