@@ -248,14 +248,9 @@
     <div class="header-inner">
       <h1><a href="{{ '/' | relative_url }}">kirc</a></h1>
       <nav>
-        {% for nav in site.data.nav %}
-        <a href="{{ nav.url }}" {% if nav.url == page.url %}active{% endif %}>{{ nav.text }}</a>
-        {% endfor %}
-        <!--
         <a href="{{ '/' | relative_url }}" {% if '/' == page.url %}active{% endif %}>home</a>
         <a href="{{ '/documentation' | relative_url }}">docs</a>
         <a href="https://github.com/mcpcpc/kirc">git</a>
-        -->
       </nav>
     </div>
   </header>
