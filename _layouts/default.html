@@ -8,6 +8,7 @@
   <style>
     :root {
       --color-bg-primary: #fff;
+      --color-bg-secondary: #f6f6f6;
       --color-text-primary: #222;
       --color-text-emphasis: #000;
       --color-text-muted: #666;
@@ -17,6 +18,7 @@
 
     :root[data-theme="dark"] {
       --color-bg-primary: #111;
+      --color-by-secondary: #1a1a1a;
       --color-text-primary: #ddd;
       --color-text-emphasis: #fff;
       --color-text-muted: #777;
@@ -137,7 +139,7 @@
     pre, code {
       font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
       font-size: 0.875rem;
-      background: #f6f6f6;
+      background: var(--color-bg-secondary);
       border-radius: 3px;
     }
 
@@ -206,10 +208,6 @@
     @media (prefers-color-scheme: dark) {
       header {
         background: #000;
-      }
-
-      pre, code {
-        background: #1a1a1a;
       }
 
       pre {
