@@ -94,7 +94,7 @@
       font-size: inherit;
     }
 
-    .header-inner nav a:active {
+    .header-inner nav a .active {
       color: var(--color-text-emphasis);
       text-decoration: underline;
     }
@@ -249,7 +249,7 @@
       <h1><a href="{{ '/' | relative_url }}">kirc</a></h1>
       <nav>
         {% for nav in site.data.nav %}
-        <a href="{{ nav.url }}" {% if nav.url == page.url %}active{% endif %}>{{ nav.text }}</a>
+        <a href="{{ nav.url }}" class="{% if nav.url == page.url %}active{% endif %}">{{ nav.text }}</a>
         {% endfor %}
         <!--
         <a href="{{ '/' | relative_url }}" {% if '/' == page.url %}active{% endif %}>home</a>
