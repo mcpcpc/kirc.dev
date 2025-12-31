@@ -15,6 +15,7 @@
       --color-text-muted: #666;
       --color-link: #005577;
       --color-border-primary: #ddd;
+      --color-border-secondary: #222;
       --color-border-accent: #005577;
     }
 
@@ -27,6 +28,7 @@
       --color-text-muted: #777;
       --color-link: #6cf;
       --color-border-primary: #333;
+      --color-border-secondary: #ddd;
       --color-border-accent: #6cf;
     }
 
@@ -176,7 +178,7 @@
 
     th {
       font-weight: 600;
-      border-bottom: 2px solid #222;
+      border-bottom: 2px solid var(--color-border-secondary);
     }
 
     blockquote {
@@ -212,10 +214,6 @@
     @media (prefers-color-scheme: dark) {
       header {
         background: #000;
-      }
-
-      th {
-        border-color: #ddd;
       }
     }
     .theme-toggle {
