@@ -2,5 +2,5 @@
   url: /
 - text: docs
   url: /documentation
-- text: git
-  url: https://github.com/mcpcpc/git 
+- text: src
+  url: https://github.com/mcpcpc/kirc
