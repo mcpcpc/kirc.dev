@@ -17,6 +17,6 @@ navigation:
 - text: home
   url: /
 - text: docs
-  url: /docs
+  url: /docs/
 - text: src
   url: https://github.com/mcpcpc/kirc
