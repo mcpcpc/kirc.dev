@@ -6,6 +6,22 @@
   <title>{{ page.title | default: site.title }}</title>
   <meta name="description" content="{{ page.description | default: site.description }}">
   <style>
+    :root {
+      --color-bg: #fff;
+      --color-text: #222;
+      --color-text-emphasis: #000;
+      --color-text-dimmed: #666;
+      --color-link: #005577;
+    }
+
+    :root[data-theme="dark"] {
+      --color-bg: #111;
+      --color-text: #ddd;
+      --color-text-emphasis: #fff;
+      --color-text-dimmed: #777;
+      --color-link: #6cf;
+    }
+
     * {
       margin:  0;
       padding: 0;
@@ -16,8 +32,8 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
       font-size: 16px;
       line-height: 1.5;
-      color: #222;
-      background: #fff;
+      color: var(--color-text);
+      background: var(--color-bg);
     }
 
     header {
@@ -50,7 +66,7 @@
     }
 
     .header-inner h1 a {
-      color: #000;
+      color: var(--color-text-emphasis);
       text-decoration: none;
     }
 
@@ -67,12 +83,12 @@
     }
 
     .header-inner nav a:active {
-      color: #000;
+      color: var(--color-text-emphasis);
       text-decoration: underline;
     }
 
     .header-inner nav a:hover {
-      color: #000;
+      color: var(--color-text-emphasis);
     }
 
     main {
@@ -101,10 +117,10 @@
     }
 
     a {
-      color:  #005577;
+      color: var(--color-link);
     }
-
-    a: hover {
+  
+    a:hover {
       text-decoration: none;
     }
 
@@ -182,34 +198,13 @@
     }
 
     footer a {
-      color: #666;
+      color: var(--color-text-dimmed);
     }
 
     @media (prefers-color-scheme: dark) {
-      html {
-        color: #ddd;
-        background: #111;
-      }
-
       header {
         background: #000;
         border-bottom: 1px solid #333;
-      }
-      
-      .header-inner h1 a {
-        color: #fff;
-      }
-      
-      .header-inner nav a:active {
-        color: #fff;
-      }
-
-      .header-inner nav a:hover {
-        color: #fff;
-      }
-
-      a {
-        color: #6cf;
       }
 
       pre, code {
@@ -235,10 +230,6 @@
 
       hr, footer {
         border-color: #333;
-      }
-
-      footer, footer a {
-        color: #777;
       }
     }
   </style>
