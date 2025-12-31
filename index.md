@@ -44,6 +44,6 @@ With a simple `make` command, you can build kirc from source. No complex build s
 
 ## Getting Started
 
-- [Read the full documentation](/documentation)
+- [Read the full documentation](/docs)
 - [Report issues on GitHub](https://github.com/mcpcpc/kirc/issues)
 - [View the source code](https://github.com/mcpcpc/kirc)

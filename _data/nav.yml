@@ -1,6 +1,6 @@
 - text: home
   url: /
 - text: docs
-  url: /documentation
+  url: /docs
 - text: src
   url: https://github.com/mcpcpc/kirc
